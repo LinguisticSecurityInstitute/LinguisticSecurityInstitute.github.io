@@ -4,42 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linguistic Security Institute (LSI) | AI Governance &amp; Multilingual Trust</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Earthy Nature Inspired + Earth Tech Vibes */
-            --bg-primary: #0d1512;
+            --bg-primary: #0b1410;
             --bg-secondary: #13221b;
-            --bg-card: rgba(22, 38, 30, 0.7);
-            --border-color: rgba(64, 110, 88, 0.3);
-            --border-hover: rgba(79, 184, 126, 0.5);
-            --accent-sage: #8ab89b;
-            --accent-forest: #4fb87e;
-            --accent-glow: rgba(79, 184, 126, 0.15);
-            --text-main: #f0f4f1;
-            --text-muted: #a3b3aa;
-            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --bg-card: rgba(22, 40, 31, 0.75);
+            --border-color: rgba(64, 110, 85, 0.35);
+            --accent-green: #68b684;
+            --accent-glow: #a3e635;
+            --text-main: #f0fdf4;
+            --text-muted: #94a3b8;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        
         body {
-            font-family: var(--font-sans);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             color: var(--text-main);
             line-height: 1.6;
-            padding: 1.5rem 1rem;
-            min-height: 100vh;
+            padding: 1rem;
         }
-
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 1rem; 
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
         
         nav {
             display: flex;
@@ -47,230 +31,83 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
-            padding: 1.25rem 1.5rem;
-            background: rgba(13, 21, 18, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            margin-bottom: 2.5rem;
-            position: sticky;
-            top: 1rem;
-            z-index: 100;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
         }
-
-        .logo { 
-            font-family: var(--font-mono);
-            font-size: 1.15rem; 
-            font-weight: 700; 
-            color: #fff; 
-            letter-spacing: -0.03em; 
-            text-decoration: none; 
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .logo::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-forest);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-forest);
-        }
-        .logo span { color: var(--accent-sage); }
-
-        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
-        .nav-links a { 
-            color: var(--text-muted); 
-            text-decoration: none; 
-            font-size: 0.875rem; 
-            font-weight: 500; 
-            transition: color 0.2s ease; 
-        }
-        .nav-links a:hover { color: var(--accent-sage); }
+        .logo { font-size: 1.25rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; text-decoration: none; }
+        .logo span { color: var(--accent-green); }
+        .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent-green); }
 
         .hero {
             text-align: center;
-            padding: 4rem 1.5rem;
-            background: radial-gradient(circle at center, rgba(31, 56, 44, 0.4) 0%, transparent 70%);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            margin-bottom: 3rem;
-            position: relative;
-            overflow: hidden;
+            padding: 3rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
         }
-
         .badge {
-            color: var(--accent-sage);
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            font-weight: 600;
+            color: var(--accent-green);
+            font-size: 0.75rem;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: var(--accent-glow);
-            padding: 0.35rem 1rem;
-            border-radius: 30px;
-            border: 1px solid var(--border-color);
+            background: rgba(104, 182, 132, 0.12);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            border: 1px solid rgba(104, 182, 132, 0.3);
             display: inline-block;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
-
-        .hero h1 { 
-            font-size: clamp(2rem, 4vw, 3.25rem); 
-            font-weight: 800; 
-            color: #fff; 
-            margin-bottom: 1.25rem; 
-            letter-spacing: -0.03em; 
-        }
-
-        .hero p { 
-            font-size: 1.05rem; 
-            color: var(--text-muted); 
-            max-width: 760px; 
-            margin: 0 auto 2.5rem auto; 
-            line-height: 1.7; 
-        }
-
+        .hero h1 { font-size: 2.75rem; font-weight: 800; color: #fff; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto; line-height: 1.7; }
         .hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        
-        .btn-primary { 
-            background-color: var(--accent-forest); 
-            color: #09100d; 
-            padding: 0.7rem 1.5rem; 
-            border-radius: 8px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            font-size: 0.875rem; 
-            transition: all 0.2s ease; 
-            box-shadow: 0 4px 20px rgba(79, 184, 126, 0.2);
-        }
-        .btn-primary:hover { 
-            transform: translateY(-1px);
-            background-color: #5ec790;
-        }
+        .btn-primary { background-color: var(--accent-green); color: #0b1410; padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 600; text-decoration: none; font-size: 0.875rem; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary { background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); color: var(--text-main); padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 500; text-decoration: none; font-size: 0.875rem; }
+        .btn-secondary:hover { border-color: var(--accent-green); }
 
-        .btn-secondary { 
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid var(--border-color); 
-            color: var(--text-main); 
-            padding: 0.7rem 1.5rem; 
-            border-radius: 8px; 
-            font-weight: 600; 
-            text-decoration: none; 
-            font-size: 0.875rem; 
-            transition: all 0.2s ease; 
-        }
-        .btn-secondary:hover { 
-            border-color: var(--accent-sage); 
-            background: rgba(255, 255, 255, 0.06);
-        }
-
-        section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-color); }
-        section:last-of-type { border-bottom: none; }
+        section { padding: 2rem 0; border-bottom: 1px solid var(--border-color); }
+        h2 { font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-glow); margin-bottom: 1.5rem; }
         
-        h2 { 
-            font-family: var(--font-mono);
-            font-size: 0.75rem; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 0.2em; 
-            color: var(--accent-sage); 
-            margin-bottom: 1.75rem; 
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        h2::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border-color);
-            margin-left: 1rem;
-        }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.25rem; }
+        .card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(8px); }
+        .card h3 { font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 0.75rem; }
+        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.6; }
         
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
-        
-        .card { 
-            background-color: var(--bg-card); 
-            backdrop-filter: blur(8px);
-            border: 1px solid var(--border-color); 
-            border-radius: 14px; 
-            padding: 1.75rem; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between; 
-            transition: border-color 0.2s ease, transform 0.2s ease;
-        }
-        .card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-        }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+        .tag { font-size: 0.725rem; color: var(--accent-glow); background: rgba(163, 230, 53, 0.12); padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid rgba(104, 182, 132, 0.3); text-decoration: none; }
+        a.tag:hover { border-color: var(--accent-glow); }
 
-        .card h3 { 
-            font-size: 1.15rem; 
-            font-weight: 700; 
-            color: #fff; 
-            margin-bottom: 0.75rem; 
-            letter-spacing: -0.01em;
-        }
-        .card p { 
-            font-size: 0.9rem; 
-            color: var(--text-muted); 
-            margin-bottom: 1.5rem; 
-            line-height: 1.65; 
-        }
-        
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
-        .tag { 
-            font-family: var(--font-mono);
-            font-size: 0.7rem; 
-            color: var(--accent-sage); 
-            background: var(--accent-glow); 
-            padding: 0.25rem 0.6rem; 
-            border-radius: 6px; 
-            border: 1px solid var(--border-color); 
-        }
-
-        .highlight-card {
-            background: linear-gradient(145deg, rgba(22, 38, 30, 0.9) 0%, rgba(15, 28, 22, 0.9) 100%);
-            border-color: var(--accent-forest);
-        }
-
-        footer { 
-            text-align: center; 
-            margin-top: 3rem; 
-            color: var(--text-muted); 
-            font-size: 0.825rem; 
-            padding: 2rem 0; 
-            border-top: 1px solid var(--border-color);
-        }
-        footer a { color: var(--accent-sage); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        footer { text-align: center; margin-top: 2rem; color: #94a3b8; font-size: 0.8rem; padding: 1.5rem 0; }
+        footer a { color: var(--accent-green); text-decoration: none; }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
     </style>
 </head>
 <body>
 <div class="container">
 
     <nav>
-        <a href="#" class="logo">LSI <span>// Research</span></a>
+        <a href="#" class="logo">LSI <span>// EarthTech</span></a>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#initiatives">Initiatives</a>
             <a href="#research">Research</a>
             <a href="#workshops">Workshops</a>
-            <a href="https://github.com/linguisticsecurityinstitute" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://almadisahara.com" target="_blank" rel="noopener">Founder</a>
+            <a href="https://github.com/linguisticsecurityinstitute" target="_blank" rel="noopener">GitHub</a>
         </div>
     </nav>
 
     <header class="hero">
-        <span class="badge">Open-Source AI Governance &amp; Security</span>
+        <span class="badge">Open-Source AI Governance &amp; Multilingual Trust</span>
         <h1>Linguistic Security Institute</h1>
         <p>The Linguistic Security Institute (LSI) is an open-source research initiative dedicated to ensuring AI systems are culturally coherent, institutionally resilient, and ethically verifiable. We audit linguistic bias in AI, develop open-source tools for bias detection, create educational resources for developers and students, and propose governance frameworks for linguistic safety in AI development.</p>
         <div class="hero-cta">
             <a href="#initiatives" class="btn-primary">Explore Projects</a>
-            <a href="https://github.com/linguisticsecurityinstitute" target="_blank" rel="noopener" class="btn-secondary">View GitHub Organization</a>
+            <a href="https://www.linkedin.com/company/linguistic-securityinstitute" target="_blank" rel="noopener" class="btn-secondary">LinkedIn Network</a>
         </div>
     </header>
 
@@ -326,36 +163,46 @@
         <div class="grid-2">
             <div class="card">
                 <div>
-                    <span class="tag" style="margin-bottom: 0.75rem; display: inline-block;">ACL 2026 · SemEval Task 9</span>
-                    <h3>Arabic Polarization Detection Across 10+ LLMs</h3>
-                    <p>Empirical analysis mapping dialectal bias, hallucinations, and alignment vulnerabilities across major commercial and open-weights models.</p>
+                    <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">BAREC Shared Task 2026</span>
+                    <h3>Fine-Grained Arabic Sentence Readability</h3>
+                    <p>Ranked 1st in the Constrained track and 3rd in the Open track with an ensemble score of 81.7 QWK and 1.0 MAE using logit-level ensembles and Earth Mover's Distance loss[cite: 2].</p>
                 </div>
+                <div class="tags"><span class="tag">BAREC 2026</span><span class="tag">Readability</span></div>
             </div>
             <div class="card">
                 <div>
-                    <span class="tag" style="margin-bottom: 0.75rem; display: inline-block;">NeurIPS 2026 (Submitted)</span>
-                    <h3>Linguistic Security Decay in Frontier Models</h3>
-                    <p>Uncovering an 80% safety filter bypass rate under code-switched stress tests and quantifying regional semantic drift.</p>
+                    <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">SemEval-2026 Task 9 (POLAR)</span>
+                    <h3>Arabic Online Polarization Detection</h3>
+                    <p>Advanced architectures for multi-label type classification combining encoder fine-tuning, zero-shot prompting, and retrieval-augmented in-context learning (RAG-ICL)[cite: 3].</p>
                 </div>
+                <div class="tags"><span class="tag">SemEval POLAR</span><span class="tag">Classification</span></div>
             </div>
         </div>
     </section>
 
     <section id="workshops">
         <h2>Upcoming Workshops &amp; Demos</h2>
-        <div class="card highlight-card">
+        <div class="card" style="background: rgba(22, 40, 31, 0.9); border-color: var(--accent-green);">
             <div>
-                <span class="tag" style="margin-bottom: 0.85rem; display: inline-block; background: rgba(79, 184, 126, 0.25); color: #fff;">Official Hands-On Workshop</span>
+                <span class="tag" style="margin-bottom: 0.75rem; display: inline-block; background: rgba(104, 182, 132, 0.2); color: var(--accent-glow);">Official Hands-On Workshop</span>
                 <h3>Linguistic Firewall: Expanded Reproducible Version</h3>
                 <p>An expanded, fully reproducible workshop built on top of the security demo presented in April 2026. Join us for an intensive hands-on session covering polyglot red-teaming and defense frameworks.</p>
-                <p style="color: var(--accent-sage); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; margin-top: 1rem;">📍 DEATHCon BSides — November 14, 2026</p>
+                <p style="color: #fff; font-weight: 600; margin-top: 0.5rem;">📍 DEATHCon BSides — November 14, 2026</p>
+            </div>
+            <div style="margin-top: 1.25rem;">
+                <a href="https://deathcon.io/workshops.html" target="_blank" rel="noopener" class="tag" style="background: var(--accent-green); color: #0b1410; font-weight: 600; padding: 0.4rem 0.8rem; display: inline-block;">View DeathCon Workshops &rarr;</a>
             </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Linguistic Security Institute (LSI). Built for open science &amp; algorithmic transparency.</p>
-        <p style="margin-top: 0.5rem;"><a href="https://linguisticsecurityinstitute.github.io/" target="_blank" rel="noopener">linguisticsecurityinstitute.github.io</a></p>
+        <div class="footer-links">
+            <a href="https://almadisahara.com" target="_blank" rel="noopener">Founder Website</a>
+            <a href="https://www.linkedin.com/company/linguistic-security-institute?trk=public_post-text" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://deathcon.io/workshops.html" target="_blank" rel="noopener">DEATHCon Workshops</a>
+            <a href="https://linguisticsecurityinstitute.github.io/" target="_blank" rel="noopener">GitHub Pages</a>
+        </div>
     </footer>
 
 </div>
