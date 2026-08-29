@@ -6,14 +6,14 @@
     <title>Linguistic Security Institute (LSI) | AI Governance &amp; Multilingual Trust</title>
     <style>
         :root {
-            --bg-primary: #0b1410;
-            --bg-secondary: #13221b;
-            --bg-card: rgba(22, 40, 31, 0.75);
-            --border-color: rgba(64, 110, 85, 0.35);
-            --accent-green: #68b684;
-            --accent-glow: #a3e635;
-            --text-main: #f0fdf4;
-            --text-muted: #94a3b8;
+            --bg-primary: #1f2b24;
+            --bg-secondary: #2c3b32;
+            --bg-card: rgba(44, 59, 50, 0.85);
+            --border-color: rgba(110, 143, 122, 0.35);
+            --accent-green: #7ca982;
+            --accent-glow: #c2e7da;
+            --text-main: #f4f7f4;
+            --text-muted: #b0c4b8;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -41,6 +41,18 @@
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: var(--accent-green); }
 
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.25rem;
+            font-size: 0.825rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 1rem;
+        }
+        .top-bar a { color: var(--accent-green); text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { text-decoration: underline; }
+
         .hero {
             text-align: center;
             padding: 3rem 1rem;
@@ -48,24 +60,24 @@
             margin-bottom: 2.5rem;
         }
         .badge {
-            color: var(--accent-green);
+            color: var(--accent-glow);
             font-size: 0.75rem;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: rgba(104, 182, 132, 0.12);
+            background: rgba(124, 169, 130, 0.18);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            border: 1px solid rgba(104, 182, 132, 0.3);
+            border: 1px solid rgba(124, 169, 130, 0.4);
             display: inline-block;
             margin-bottom: 1rem;
         }
         .hero h1 { font-size: 2.75rem; font-weight: 800; color: #fff; margin-bottom: 1rem; letter-spacing: -0.02em; }
         .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto; line-height: 1.7; }
         .hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary { background-color: var(--accent-green); color: #0b1410; padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 600; text-decoration: none; font-size: 0.875rem; transition: opacity 0.2s; }
+        .btn-primary { background-color: var(--accent-green); color: #16221b; padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 600; text-decoration: none; font-size: 0.875rem; transition: opacity 0.2s; }
         .btn-primary:hover { opacity: 0.9; }
-        .btn-secondary { background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); color: var(--text-main); padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 500; text-decoration: none; font-size: 0.875rem; }
+        .btn-secondary { background: rgba(255,255,255,0.06); border: 1px solid var(--border-color); color: var(--text-main); padding: 0.6rem 1.25rem; border-radius: 0.4rem; font-weight: 500; text-decoration: none; font-size: 0.875rem; }
         .btn-secondary:hover { border-color: var(--accent-green); }
 
         section { padding: 2rem 0; border-bottom: 1px solid var(--border-color); }
@@ -78,10 +90,10 @@
         .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.6; }
         
         .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
-        .tag { font-size: 0.725rem; color: var(--accent-glow); background: rgba(163, 230, 53, 0.12); padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid rgba(104, 182, 132, 0.3); text-decoration: none; }
+        .tag { font-size: 0.725rem; color: var(--accent-glow); background: rgba(194, 231, 218, 0.12); padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid rgba(124, 169, 130, 0.3); text-decoration: none; }
         a.tag:hover { border-color: var(--accent-glow); }
 
-        footer { text-align: center; margin-top: 2rem; color: #94a3b8; font-size: 0.8rem; padding: 1.5rem 0; }
+        footer { text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.8rem; padding: 1.5rem 0; }
         footer a { color: var(--accent-green); text-decoration: none; }
         .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
     </style>
@@ -89,16 +101,20 @@
 <body>
 <div class="container">
 
+    <div class="top-bar">
+        <a href="https://almadisahara.com" target="_blank" rel="noopener">🌐 Founder Website (Almadi Sahara)</a>
+        <a href="https://www.linkedin.com/company/linguistic-security-institute" target="_blank" rel="noopener">💼 LSI LinkedIn</a>
+    </div>
+
     <nav>
         <a href="#" class="logo">LSI <span>// EarthTech</span></a>
         <div class="nav-links">
-            <a href="https://almadisahara.com" target="_blank" rel="noopener">Founder Website</a>
-            <a href="https://www.linkedin.com/company/linguistic-security-institute?trk=public_post-text" target="_blank" rel="noopener">LSI LinkedIn</a>
             <a href="#about">About</a>
             <a href="#initiatives">Initiatives</a>
             <a href="#research">Research</a>
             <a href="#workshops">Workshops</a>
             <a href="#poster">Poster</a>
+            <a href="https://almadisahara.com" target="_blank" rel="noopener">Founder</a>
             <a href="https://github.com/linguisticsecurityinstitute" target="_blank" rel="noopener">GitHub</a>
         </div>
     </nav>
@@ -166,23 +182,21 @@
             <div class="card">
                 <div>
                     <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">BAREC Shared Task 2026</span>
-                    <h3>Fine-Grained Arabic Sentence Readability</h3>
-                    <p>Ranked 1st in the Constrained track and 3rd in the Open track with an ensemble score of 81.7 QWK and 1.0 MAE using logit-level ensembles and Earth Mover's Distance loss.</p>
+                    <h3>LSI at BAREC Shared Task 2026: A Controlled Study of Training Convergence, Heuristics, and Ensembles for Arabic Sentence-Level Readability</h3>
+                    <p>Ranked 1st in the Constrained track and 3rd in the Open track with an ensemble score using logit-level ensembles and Earth Mover's Distance loss.</p>
                 </div>
-                <div class="tags">
-                    <a href="https://barec.camel-lab.com/sharedtask2026" target="_blank" rel="noopener" class="tag">BAREC Shared Task</a>
-                    <span class="tag">Readability</span>
+                <div style="margin-top: 1rem;">
+                    <a href="https://barec.camel-lab.com/sharedtask2026" target="_blank" rel="noopener" class="tag" style="background: var(--accent-green); color: #16221b; font-weight: 600; padding: 0.3rem 0.6rem; display: inline-block;">View BAREC Shared Task &rarr;</a>
                 </div>
             </div>
             <div class="card">
                 <div>
                     <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">SemEval-2026 Task 9 (POLAR)</span>
-                    <h3>Arabic Online Polarization Detection</h3>
+                    <h3>NAMAA at SemEval-2026 Task 9: Comparing Generative, Retrieval-Augmented, and Discriminative Methods for Arabic Online Polarization Detection and Type Classification</h3>
                     <p>Advanced architectures for multi-label type classification combining encoder fine-tuning, zero-shot prompting, and retrieval-augmented in-context learning (RAG-ICL).</p>
                 </div>
-                <div class="tags">
-                    <a href="https://aclanthology.org/2026.semeval-1.439/" target="_blank" rel="noopener" class="tag">NAMAA Paper (ACL Anthology)</a>
-                    <span class="tag">Classification</span>
+                <div style="margin-top: 1rem;">
+                    <a href="https://aclanthology.org/2026.semeval-1.439/" target="_blank" rel="noopener" class="tag" style="background: var(--accent-green); color: #16221b; font-weight: 600; padding: 0.3rem 0.6rem; display: inline-block;">View ACL Anthology Paper &rarr;</a>
                 </div>
             </div>
         </div>
@@ -190,26 +204,25 @@
 
     <section id="workshops">
         <h2>Upcoming Workshops &amp; Demos</h2>
-        <div class="card" style="background: rgba(22, 40, 31, 0.9); border-color: var(--accent-green);">
+        <div class="card" style="background: rgba(44, 59, 50, 0.95); border-color: var(--accent-green);">
             <div>
-                <span class="tag" style="margin-bottom: 0.75rem; display: inline-block; background: rgba(104, 182, 132, 0.2); color: var(--accent-glow);">Official Hands-On Workshop</span>
+                <span class="tag" style="margin-bottom: 0.75rem; display: inline-block; background: rgba(124, 169, 130, 0.25); color: var(--accent-glow);">Official Hands-On Workshop</span>
                 <h3>Linguistic Firewall: Expanded Reproducible Version</h3>
                 <p>An expanded, fully reproducible workshop built on top of the security demo presented in April 2026. Join us for an intensive hands-on session covering polyglot red-teaming and defense frameworks.</p>
                 <p style="color: #fff; font-weight: 600; margin-top: 0.5rem;">📍 DEATHCon BSides — November 14, 2026</p>
             </div>
             <div style="margin-top: 1.25rem;">
-                <a href="https://deathcon.io/workshops.html" target="_blank" rel="noopener" class="tag" style="background: var(--accent-green); color: #0b1410; font-weight: 600; padding: 0.4rem 0.8rem; display: inline-block;">View DeathCon Workshops &rarr;</a>
+                <a href="https://deathcon.io/workshops.html" target="_blank" rel="noopener" class="tag" style="background: var(--accent-green); color: #16221b; font-weight: 600; padding: 0.4rem 0.8rem; display: inline-block;">View DeathCon Workshops &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- Speaking Poster Showcase Section Integrated -->
     <section id="poster">
         <h2>2026 Speaking Engagements &amp; Poster Showcase</h2>
-        <div style="background: rgba(22, 40, 31, 0.9); border: 1px solid rgba(104, 182, 132, 0.4); border-radius: 0.5rem; padding: 1.5rem; text-align: center;">
-            <p style="color: var(--accent-green); font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Official LSI 2026 Engagements &amp; Research Poster Showcase</p>
+        <div style="background: rgba(44, 59, 50, 0.9); border: 1px solid rgba(124, 169, 130, 0.4); border-radius: 0.5rem; padding: 1.5rem; text-align: center;">
+            <p style="color: var(--accent-glow); font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Official LSI 2026 Engagements &amp; Research Poster Showcase</p>
             
-            <div style="max-width: 750px; margin: 0 auto; border: 2px solid rgba(104, 182, 132, 0.5); border-radius: 0.4rem; overflow: hidden; background: #0b1410; padding: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+            <div style="max-width: 750px; margin: 0 auto; border: 2px solid rgba(124, 169, 130, 0.5); border-radius: 0.4rem; overflow: hidden; background: #1f2b24; padding: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
                 <img src="https://thoughtflowellness.wordpress.com/wp-content/uploads/2026/08/lsi-2026-conferences.jpeg" alt="LSI 2026 Conferences and Speaking Poster" style="width: 100%; height: auto; display: block; border-radius: 0.25rem;" />
             </div>
         </div>
